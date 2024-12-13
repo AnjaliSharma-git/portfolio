@@ -1,3 +1,30 @@
+// Change Navbar Background on Scroll
+window.addEventListener("scroll", () => {
+  const navbar = document.getElementById("navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
+// Mobile Menu Toggle
+const toggleButton = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+toggleButton.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+// Highlight Active Link
+const navItems = document.querySelectorAll(".nav-link");
+navItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    navItems.forEach((link) => link.classList.remove("active"));
+    item.classList.add("active");
+  });
+});
+
 // Typing animation in the Hero section
 document.addEventListener("DOMContentLoaded", () => {
     const typed = document.querySelector(".typed");
@@ -46,14 +73,15 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
+  const skillsBox = document.getElementById("skillsBox");
+const skillsContainer = document.querySelector(".skills-container");
+
+// Trigger scatter animation on hover
+skillsBox.addEventListener("click", () => {
+  skillsContainer.classList.toggle("active");
+});
+
   
-  // Form submission placeholder
-  const form = document.querySelector("form");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      alert("Thank you for your message! We will get back to you shortly.");
-      form.reset();
-    });
-  }
+
   
