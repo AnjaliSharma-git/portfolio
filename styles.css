@@ -648,3 +648,165 @@ a {
     transform: translateX(0);
   }
 }
+
+
+/* Responsive Design */
+
+/* Small Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Hero Section */
+  #hero {
+    height: auto; /* Let the height adjust dynamically */
+    padding: 20px 10px;
+    text-align: center;
+  }
+  #hero .profile-image {
+    max-width: 150px;
+    height: 150px;
+  }
+  #hero h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  #hero p {
+    font-size: 16px;
+  }
+
+  /* Navigation Bar */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #121212;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* About Section */
+  #about .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #about .highlights ul li {
+    font-size: 14px;
+  }
+
+  /* Skills Section */
+  #skills .skills-container {
+    grid-template-columns: repeat(2, 1fr); /* Reduce to 2 columns */
+    gap: 15px;
+  }
+
+  /* Projects Section */
+  #projects .projects-container {
+    padding: 10px;
+    gap: 15px;
+  }
+  .project-card {
+    width: calc(100% - 20px); /* Use most of the screen width */
+    margin: 0 auto;
+  }
+
+  /* Resume Section */
+  #resume .resume-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  #resume .resume-card .card-icon {
+    margin-bottom: 10px;
+  }
+
+  /* Contact Section */
+  .contact-details {
+    flex-direction: column;
+  }
+  .contact-item {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/* Extra Small Devices (max-width: 576px) */
+@media (max-width: 576px) {
+  /* Hero Section */
+  #hero .profile-image {
+    max-width: 120px;
+    height: 120px;
+  }
+  #hero h1 {
+    font-size: 24px;
+  }
+  #hero p {
+    font-size: 14px;
+  }
+
+  /* Navigation Bar */
+  .nav-links {
+    width: 100%; /* Full width on very small devices */
+  }
+
+  /* About Section */
+  #about h2 {
+    font-size: 24px;
+  }
+  #about .highlights h3 {
+    font-size: 18px;
+  }
+
+  /* Skills Section */
+  #skills .skills-container {
+    grid-template-columns: 1fr; /* Single column */
+  }
+
+  /* Projects Section */
+  .project-card {
+    width: 100%; /* Full width */
+  }
+
+  /* Contact Section */
+  .contact-details {
+    gap: 20px;
+  }
+}
+
+/* Text Scaling for All Devices */
+html {
+  font-size: 16px; /* Default font size */
+}
+@media (max-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media (max-width: 576px) {
+  html {
+    font-size: 12px;
+  }
+}
