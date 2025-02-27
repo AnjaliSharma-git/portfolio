@@ -1,7 +1,8 @@
 /* Base Styles */
 body {
   font-family: "Poppins", sans-serif;
-  margin: 0;
+  margin-left: 70px;
+  margin-right: 70px;
   padding: 0;
   background: #121212;
   color: #eaeaea;
@@ -371,14 +372,17 @@ a {
 
 .project-links {
   display: flex;
+  flex-direction: column; /* Stack buttons vertically */
   gap: 10px;
   margin-top: 15px;
 }
 
 .btn {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 8px 12px;
+  width: 75%; /* Make buttons full width */
+  padding: 10px;
   border-radius: 5px;
   font-size: 14px;
   font-weight: bold;
