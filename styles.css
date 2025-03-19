@@ -354,15 +354,13 @@ a {
 
 /* Projects Section */
 .project-card {
+  flex: 1 1 300px; /* Makes cards responsive */
+  max-width: 300px; /* Prevents cards from being too wide */
   background: #1c1c1c;
-  width: 300px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  flex-shrink: 0;
-  scroll-snap-align: start;
-  cursor: pointer;
 }
 
 .project-card:hover {
@@ -414,6 +412,7 @@ a {
 @media (max-width: 768px) {
   .project-links {
     flex-direction: column;
+    align-items: center;
   }
   
   .btn {
@@ -425,11 +424,13 @@ a {
 /* Keep existing projects container styles */
 .projects-container {
   display: flex;
-  overflow-x: auto;
+  flex-wrap: wrap; /* Ensures projects wrap properly */
+  justify-content: center; /* Centers projects */
   gap: 20px;
   padding: 20px;
-  scroll-snap-type: x mandatory;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the container */
 }
 
 /* Maintaining scrollbar styling */
